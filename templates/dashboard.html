@@ -9,30 +9,59 @@
     <h2><strong>
         Choose An Internet package To Enjoy Unlimited Data.
          </strong></h2>
-         <p>Customer care support: 0717000000</p>
+         <p>Customer care support: 0717-988-187</p>
 </div>
 <div class="packages">
     <div class="package-1">
         <h2>Unlimited Internet, 2 Hrs</h2>
         <p>Ksh <span>15</span></p>
-        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
-        <h2>Unlimited Internet 5 Hrs</h2>
+        <h2>Unlimited Internet, 5 Hrs</h2>
         <p>Ksh <span>35</span></p>
-        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
-        <h2>Unlimited Internet 10 Hrs</h2>
+        <h2>Unlimited Internet 10, Hrs</h2>
         <p>Ksh <span>50</span></p>
-        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+    </div>
+    <div class="package-1">
+        <h2>Unlimited Internet, 2 Days</h2>
+        <p>Ksh <span>160</span></p>
+        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+    </div>
+    <div class="package-1">
+        <h2>Unlimited Internet, 5 Days</h2>
+        <p>Ksh <span>200</span></p>
+        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
 </div>
 
-<div id="payment-section">
-    <p id="selected-package"></p>
-    <input type="tel" name="" id="phone-number" placeholder="Enter your Safaricom phone number">
-    <button onclick="initiatePayment()">Pay</button>
+
+
+<div class="modal" id="payment-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="selected-package"></h2>
+        <input type="tel" name="phone-number" id="phone-number" placeholder="Enter Your Mpesa Number To Initiate Payment">
+        <button onclick="initiatePayment()">Pay</button>
+    </div>
+</div>
+<div class="modal" id="processing-modal">
+    <div class="modal-content">
+        <h2>Please Wait...</h2>
+        <p>We are verifying your payment. This may take a few seconds.</p>
+    </div>
+</div>
+
+<div class="modal" id="success-modal">
+    <div class="modal-content">
+        <h2>Payment Successful!</h2>
+        <p class="checkmark">Thanks</p>
+        <p>You are now connected to the Internet</p>
+    </div>
 </div>
 <div id="success-animation">Payment Successful! You're now connected</div>
 </div>
