@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<div class="header">
+    <img src="{{ url_for('static', filename='images/mnety-logo.png')}}" alt="" class="logo">
+    <h1 class="heading">MNETI FITI</h1>
+</div>
+<div class="instructions">
+    <h2><strong>
+        Choose An Internet package To Enjoy Unlimited Data.
+         </strong></h2>
+         <p>Customer care support: 0717000000</p>
+</div>
+<div class="packages">
+    <div class="package-1">
+        <h2>Unlimited Internet, 2 Hrs</h2>
+        <p>Ksh <span>15</span></p>
+        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+    </div>
+    <div class="package-1">
+        <h2>Unlimited Internet 5 Hrs</h2>
+        <p>Ksh <span>35</span></p>
+        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+    </div>
+    <div class="package-1">
+        <h2>Unlimited Internet 10 Hrs</h2>
+        <p>Ksh <span>50</span></p>
+        <button>Konnect <i class="fa-solid fa-wifi"></i></button>
+    </div>
+</div>
+
+<div id="payment-section">
+    <p id="selected-package"></p>
+    <input type="tel" name="" id="phone-number" placeholder="Enter your Safaricom phone number">
+    <button onclick="initiatePayment()">Pay</button>
+</div>
+<div id="success-animation">Payment Successful! You're now connected</div>
+</div>
+
+{% endblock %}
