@@ -15,27 +15,27 @@
     <div class="package-1">
         <h2>Unlimited Internet, 2 Hrs</h2>
         <p>Ksh <span>15</span></p>
-        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage('2 Hrs', 1)" class="package-button select-package" data-amount="15" data-package="2 Hrs">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
         <h2>Unlimited Internet, 5 Hrs</h2>
         <p>Ksh <span>35</span></p>
-        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage('5 Hrs', 1)" class="package-button select-package" data-amount="15" data-package="2 Hrs">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
-        <h2>Unlimited Internet 10, Hrs</h2>
+        <h2>Unlimited Internet 10 Hrs</h2>
         <p>Ksh <span>50</span></p>
-        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage('10 Hrs', 1)" class="package-button select-package" data-amount="50" data-package="10 Hrs">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
         <h2>Unlimited Internet, 2 Days</h2>
         <p>Ksh <span>160</span></p>
-        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage('2 Days', 1)" class="package-button select-package" data-amount="160" data-package="2 Days">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
     <div class="package-1">
         <h2>Unlimited Internet, 5 Days</h2>
         <p>Ksh <span>200</span></p>
-        <button onclick="selectPackage()" class="package-button">Konnect <i class="fa-solid fa-wifi"></i></button>
+        <button onclick="selectPackage('5 Days', 1)" class="package-button select-package" data-amount="200" data-package="5 Days">Konnect <i class="fa-solid fa-wifi"></i></button>
     </div>
 </div>
 
@@ -43,10 +43,14 @@
 
 <div class="modal" id="payment-modal">
     <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal" id="close-modal">
+            <span class="close-btn" onclick="closeModal('payment-modal')">&times;</span>
+        </div>
         <h2 id="selected-package"></h2>
-        <input type="tel" name="phone-number" id="phone-number" placeholder="Enter Your Mpesa Number To Initiate Payment">
-        <button onclick="initiatePayment()">Pay</button>
+        <form  id="payment-form">
+        <input type="tel" name="phone-number" id="phone-number" placeholder="Enter Your Mpesa Number To Initiate Payment" required>
+        <button type="submit">Pay</button>
+        </form>
     </div>
 </div>
 <div class="modal" id="processing-modal">
