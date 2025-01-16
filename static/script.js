@@ -20,7 +20,7 @@ const showProcessingModel = () => {
         // const successModal = document.getElementById("success-modal");
         // successModal.style.display = "flex";
         // setTimeout(()=> closeModal('success-modal'), 5000);
-    }, 1000);
+    }, 2000);
 
 }
 
